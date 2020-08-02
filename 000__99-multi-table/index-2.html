@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div id="app">
+    <table class="multi-table"></table>
+  </div>
+
+  <script>
+    let items = []
+    const lineSymbol = '__'
+
+    for (let i = 1; i <= 9; i++) {
+      items.push(lineSymbol)
+      for (let j = 1; j <= i; j++) {
+        items.push(`${j} x ${i} = ${j*i}`)
+      }
+    }
+
+    const $container = document.querySelector('.multi-table')
+
+    const genTD = content => {
+      const $td = document.createElement('td')
+      $td.textContent = content
+      return $td
+    }
+
+    const genTR = () => document.createElement('tr')
+
+    const appendTableCell = (index = 0, $tr) => {
+      if (index >= items.length) return
+
+      const item = items[index]
+      if (item === lineSymbol) {
+        $tr = genTR()
+        $container.appendChild($tr)
+        appendTableCell(++index, $tr)
+      } else {
+        const $td = genTD(item)
+        setTimeout(() => {
+          $tr.appendChild($td)
+          appendTableCell(++index, $tr)
+        }, 60);
+      }
+    }
+
+    appendTableCell()
+  </script>
+</body>
+</html>

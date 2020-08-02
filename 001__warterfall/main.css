@@ -1,0 +1,29 @@
+/* reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* content */
+#app {
+  margin: 0 auto;
+  margin-top: 15px;
+  position: relative;
+}
+.cell {
+  width: 190px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: absolute;
+}
+.img-box {
+  font-size: 0;
+}
+#loading {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: linear-gradient(45deg, #2193b0, #6dd5ed);
+  color: #ffffff;
+}

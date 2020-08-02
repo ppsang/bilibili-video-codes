@@ -1,0 +1,52 @@
+/* reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+/* content */
+#app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #264653;
+}
+
+.circle-container {
+  width: 320px;
+  height: 320px;
+  position: relative;
+}
+.circle-container .circle {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 10px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 3rem;
+  -webkit-user-select: none;
+}
+.circle-container .circle-bar {
+  position: absolute;
+  z-index: 20;
+  left: 145px;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e76f51;
+  cursor: pointer;
+  box-shadow: 0 0 1px 1px #777777;
+}
+
+/*# sourceMappingURL=main.css.map */

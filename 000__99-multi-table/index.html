@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div id="app">
+    <table class="multi-table"></table>
+  </div>
+
+  <script>
+    const $table = document.querySelector('.multi-table')
+    const fragment = document.createDocumentFragment()
+
+    for (let i = 1; i <= 9; i++) {
+      const $tr = document.createElement('tr')
+      for (let j = 1; j <= i; j++) {
+        const $td = document.createElement('td')
+        $td.textContent = `${j} x ${i} = ${j*i}`
+        $tr.appendChild($td)
+      }
+      fragment.appendChild($tr)
+    }
+
+    $table.appendChild(fragment)
+  </script>
+</body>
+</html>

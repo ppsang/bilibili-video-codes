@@ -1,0 +1,58 @@
+/* reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+$bg-color: #264653;
+$color: #ffffff;
+$bar_color: #e76f51;
+$len: 320px;                  // 容器边长
+$circle_r: $len / 2;          // 圆形半径
+$circle_b: 10px;              // 圆形边距(border-width)
+$bar_r: 15px;                 // 小球半径
+
+/* content */
+#app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+}
+.circle-container {
+  width: $len;
+  height: $len;
+  position: relative;
+
+  .circle {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: $len;
+    height: $len;
+    border-radius: 50%;
+    border: $circle_b solid $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color;
+    font-size: 3rem;
+    -webkit-user-select: none;
+  }
+  .circle-bar {
+    position: absolute;
+    z-index: 20;
+    left: $circle_r - $bar_r;
+    top: -($bar_r - $circle_b / 2);
+    width: $bar_r * 2;
+    height: $bar_r * 2;
+    border-radius: 50%;
+    background-color: $bar_color;
+    cursor: pointer;
+    box-shadow: 0 0 1px 1px #777777;
+  }
+}

@@ -1,0 +1,116 @@
+/* reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+
+/* content */
+#app {
+  height: 100%;
+  position: relative;
+}
+.song__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url(images/coverblur.jpg) no-repeat center;
+  background-size: auto 100%;
+}
+.song__bg::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.song-wrap {
+  padding-top: 70px;
+}
+.song-disc {
+  position: relative;
+  width: 296px;
+  height: 296px;
+  margin: 0 auto;
+}
+.song-disc__bg {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url(images/disc-ip6.png) no-repeat center;
+  background-size: contain;
+}
+.song-disc__cover {
+  position: absolute;
+  z-index: 1;
+  width: 184px;
+  height: 184px;
+  left: 50%;
+  top: 50%;
+  margin-left: -92px;
+  margin-top: -92px;
+}
+.song-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 0;
+}
+.u-img {
+  width: 100%;
+}
+.song-img.play {
+  animation: circle 10s linear infinite;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.play-btn {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url(images/play.png) no-repeat;
+  background-size: contain;
+}
+.play-btn.play {
+  display: none;
+}
+
+.song-needle {
+  position: absolute;
+  z-index: 3;
+  top: -70px;
+  width: 96px;
+  height: 137px;
+  left: 133px;
+  background: url(images/needle-ip6.png) no-repeat;
+  background-size: contain;
+  transform: rotate(-30deg);
+  transform-origin: left top;
+  transition: transform .5s;
+}
+.song-needle.play {
+  transform: rotate(0);
+}

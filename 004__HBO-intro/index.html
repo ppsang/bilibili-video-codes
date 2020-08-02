@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div class="intro">
+    <h2>HBO</h2>
+  </div>
+
+  <script>
+    const canvas = document.querySelector('#canvas');
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width = canvas.clientWidth;
+    const h = canvas.height = canvas.clientHeight;
+
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, w, h);
+
+    const imgData = ctx.getImageData(0, 0, w, h);
+    const pix = imgData.data;
+
+    function randomBlur() {
+      for (let i = 0; i < pix.length; i+=4) {
+        const color = Math.floor(Math.random() * 255) + 50;
+        pix[i] = color;
+        pix[i+1] = color;
+        pix[i+2] = color;
+      }
+      ctx.putImageData(imgData, 0, 0);
+      setTimeout(randomBlur, 30);
+    }
+
+    randomBlur();
+  </script>
+</body>
+</html>

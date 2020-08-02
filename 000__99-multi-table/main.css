@@ -1,0 +1,23 @@
+/* reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* content */
+#app {
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #5f9ea0;
+  color: #eeeeee;
+}
+.multi-table {
+  border-collapse: collapse;
+}
+.multi-table td {
+  width: 100px;
+  border: 1px solid #ffffff;
+  padding: 6px 0;
+  text-align: center;
+}
