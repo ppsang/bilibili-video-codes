@@ -1,3 +1,12 @@
+## 视频中提取部分音频
+
+> B站: [【工具】只需两步, 轻松从B站视频提取出你想要的音频片段](https://www.bilibili.com/video/BV1yV411z7UH/)
+
+### 前置条件
+
+1. 安装 youtube-dl: `pip install youtube-dl`
+2. 安装 ffmpeg: [下载地址](https://ffmpeg.org/download.html)
+
 ### 命令
 
 下载视频: `youtube-dl -x --audio-format mp3 https://www.bilibili.com/video/BV1f4411M7QC/`
