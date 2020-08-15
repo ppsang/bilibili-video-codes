@@ -1,0 +1,81 @@
+/* reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  background: #264653;
+}
+
+/* content */
+.luckdraw {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 100px auto;
+  overflow: hidden;
+}
+.luckpanel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 3s ease-in-out;
+}
+#canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.prize {
+  position: absolute;
+  left: 25%;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  .prize-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center bottom;
+
+    &__name {
+      position: absolute;
+      left: 10px;
+      top: 20px;
+      width: calc(100% - 20px);
+      font-size: 12px;
+      text-align: center;
+      color: #ff5722;
+    }
+
+    &__img {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 60px;
+      left: calc(50% - 30px / 2);
+
+      img {
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+
+.pointer {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 10;
+  left: calc(50% - 80px / 2 + 6px);
+  top: calc(50% - 80px / 2);
+  background: url(https://img11.360buyimg.com/imagetools/jfs/t1/89512/11/15244/137408/5e6f15edEf57fa3ff/cb57747119b3bf89.png) no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
