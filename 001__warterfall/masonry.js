@@ -74,7 +74,7 @@ class Masonry {
       cell.classList.add('cell')
       cell.innerHTML = `
         <div class="img-box">
-          <img src="${item.src}" width="${this.COLUMN_WIDTH}" height="${item.height * item.width / this.COLUMN_WIDTH}" />
+          <img src="${item.src}" width="${this.COLUMN_WIDTH}" height="${item.height * this.COLUMN_WIDTH / item.width}" />
         </div>
       `
       cells.push(cell)
