@@ -1,0 +1,17 @@
+/* reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: #f0f3bd;
+}
+
+/* content */
+.tick {
+  font-size: 1rem;
+}
+.dot {
+  fill: turquoise;
+}
