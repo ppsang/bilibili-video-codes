@@ -4,6 +4,7 @@
 
 文件目录 | B站链接
 --- | ---
+[017__d3-jump-charactor](./017__d3-jump-charactor) | [【D3】字符跳动](https://www.bilibili.com/video/BV1zv411y7GP/)
 [016__press-button](./016__press-button) | [【前端】css实现立体按压感的按钮](https://www.bilibili.com/video/BV1e54y1U7wt/)
 [015__luckdraw](./015__luckdraw) | [【前端】原生JS开发转盘抽奖](https://www.bilibili.com/video/BV1Mt4y1Q7UD/)
 [013__crowd](./013__crowd) | [【前端】HTML5 Canvas 动画 - 流动的人群](https://www.bilibili.com/video/BV18t4y1D7rd/)

@@ -1,0 +1,19 @@
+/* reset */
+html {
+  background: #f0f3bd;
+}
+
+/* letter */
+.enter {
+  fill: green;
+}
+.update {
+  fill: black;
+}
+.exit {
+  fill: red;
+}
+text {
+  font-size: 2rem;
+  font-weight: bold;
+}
