@@ -108,7 +108,12 @@ class Masonry {
     }
   }
 
-  fetchData() {
-    return fetch('http://192.168.5.2:5000/picture/get').then(res => res.json())
+  // fetchData() {
+  //   return fetch('http://192.168.5.2:5000/picture/get').then(res => res.json())
+  // }
+
+  // 模拟数据
+  async fetchData() {
+    return imgData
   }
 }
